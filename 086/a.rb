@@ -1,0 +1,1 @@
+puts gets.split.map(&:to_i).map(&:odd?).all? ? 'Odd' : 'Even'
