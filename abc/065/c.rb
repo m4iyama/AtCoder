@@ -1,19 +1,19 @@
-s = gets.chomp
+D = 1000000007
 
-def daydream(s)
-  return true if s.size == 0
+n, m = gets.split.map(&:to_i)
+diff = (n - m).abs
 
-  if s.start_with?('dreamer')
-    daydream(s[7..-1]) || daydream(s[5..-1])
-  elsif s.start_with?('dream')
-    daydream(s[5..-1])
-  elsif s.start_with?('eraser')
-    daydream(s[6..-1])
-  elsif s.start_with?('erase')
-    daydream(s[5..-1])
-  else
-    false
-  end
+def fact(n)
+  return 1 if n == 0
+
+  1.upto(n).reduce(1, &:*)
 end
 
-puts daydream(s) ? 'YES' : 'NO'
+if diff == 0
+  puts 2 * fact(n) * fact(m) % D
+elsif diff == 1
+  puts fact(n) * fact(m) % D
+else
+  puts 0
+end
+
