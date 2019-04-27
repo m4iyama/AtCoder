@@ -1,0 +1,1 @@
+puts (gets.split.map(&:to_f).reduce(&:+) / 2).ceil
