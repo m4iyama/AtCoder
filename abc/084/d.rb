@@ -4,7 +4,7 @@ def primes(n)
   until l[0] > Math.sqrt(n)
     x = l[0]
     ps << x
-    l = l.delete_if {|y| (y % x).zero?}
+    l = l.delete_if { |y| (y % x).zero? }
   end
   ps + l
 end
@@ -24,7 +24,7 @@ like2017s = like2017s(100000)
 q = gets.to_i
 q.times do
   l, r = gets.split.map(&:to_i)
-  si = like2017s.bsearch_index {|x| x >= l} || like2017s.size
-  ei = like2017s.bsearch_index {|x| x > r} || like2017s.size
+  si = like2017s.bsearch_index { |x| x >= l } || like2017s.size
+  ei = like2017s.bsearch_index { |x| x > r } || like2017s.size
   puts ei - si
 end
