@@ -1,3 +1,5 @@
 .idea
 .vscode
 a.out
+.python-version
+.DS_Store
