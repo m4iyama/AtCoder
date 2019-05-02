@@ -8,7 +8,8 @@ class UnionFind:
         if self.parent[e] == e:
             return e
 
-        return self.root(self.parent[e])
+        self.parent[e] = self.root(self.parent[e])
+        return self.parent[e]
 
     def same(self, x, y):
         return self.root(x) == self.root(y)
