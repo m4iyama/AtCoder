@@ -13,3 +13,4 @@ if s[0] == '0':
         for i in range(1, len(s0) - (k+2)):
             con += (s0[i+k+1] - s0[i-1])
 else:
+    pass
